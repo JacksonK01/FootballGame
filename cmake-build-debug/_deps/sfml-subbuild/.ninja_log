@@ -1,0 +1,21 @@
+# ninja log v6
+3	85	7701034777497228	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	ae21276d82f3e607
+3	85	7701034777497228	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	ae21276d82f3e607
+86	8406	7701034860683818	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	3d0859ef647defbf
+86	8406	7701034860683818	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	3d0859ef647defbf
+8406	8581	7701034860743817	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	54e3f234fdd3961b
+8406	8581	7701034860743817	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	54e3f234fdd3961b
+8581	8637	7701034863004092	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	dab7ff05d500226e
+8581	8637	7701034863004092	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	dab7ff05d500226e
+8637	8686	7701034863509183	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	23b53d7a48fff363
+8637	8686	7701034863509183	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	23b53d7a48fff363
+8687	8745	7701034864089223	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	34135be305b97340
+8687	8745	7701034864089223	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	34135be305b97340
+8745	8789	7701034864524318	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	502f309354178526
+8745	8789	7701034864524318	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	502f309354178526
+8789	8839	7701034865024583	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	42a5072b2feea073
+8789	8839	7701034865024583	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	42a5072b2feea073
+8839	8910	7701034865745500	CMakeFiles/sfml-populate-complete	870d0e7e4cbb72c1
+8839	8910	7701034865745500	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	870d0e7e4cbb72c1
+8839	8910	7701034865745500	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	870d0e7e4cbb72c1
+8839	8910	7701034865745500	C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	870d0e7e4cbb72c1
