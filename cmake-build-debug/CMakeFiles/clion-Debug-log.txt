@@ -1,7 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2024.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\jkirc\CLionProjects\FlagFootballSim -B C:\Users\jkirc\CLionProjects\FlagFootballSim\cmake-build-debug
--- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
--- Configuring libogg 1.3.5
--- Configuring vorbis 1.3.7
--- Configuring done (4.9s)
--- Generating done (0.4s)
--- Build files have been written to: C:/Users/jkirc/CLionProjects/FlagFootballSim/cmake-build-debug
