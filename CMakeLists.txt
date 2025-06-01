@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.30)
+cmake_minimum_required(VERSION 3.29)
 project(FlagFootballSim)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -24,6 +24,14 @@ add_executable(main src/main.cpp
         src/input/InputManager.cpp
         src/input/InputManager.h
         src/Game.cpp
-        src/Game.h)
+        src/Game.h
+        src/game/test/TestScene.cpp
+        src/game/test/TestScene.h
+        src/render/RenderDispatcher.cpp
+        src/render/RenderDispatcher.h
+        src/render/Renderers/EntityRenderer.cpp
+        src/render/Renderers/EntityRenderer.h
+        src/render/Renderers/Renderer.cpp
+        src/render/Renderers/Renderer.h)
 target_compile_features(main PRIVATE cxx_std_17)
 target_link_libraries(main PRIVATE SFML::Graphics)

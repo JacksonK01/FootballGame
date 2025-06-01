@@ -4,12 +4,18 @@
 
 #ifndef SCENE_H
 #define SCENE_H
+#include <vector>
 
+#include "../entity/Entity.h"
 
 
 class Scene {
 public:
     Scene();
+    virtual ~Scene() = default;
+    std::vector<Entity*>& getAllEntities();
+protected:
+    std::vector<Entity*> allEntity;
 };
 
 

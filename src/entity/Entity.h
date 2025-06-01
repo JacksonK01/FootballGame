@@ -12,10 +12,23 @@ class Entity {
 public:
     Entity();
 
+    [[nodiscard]] std::string getType() const;
+
+    [[nodiscard]] int getX() const;
+    void setX(int x);
+
+    [[nodiscard]] int getY() const;
+    void setY(int y);
+
+    [[nodiscard]] int getSpeed() const;
+
+    virtual ~Entity() = default;
+
 private:
-    std::string name;
-    //How long been alive in instance
-    int age;
+    std::string type;
+    int x;
+    int y;
+    int speed;
 };
 
 
