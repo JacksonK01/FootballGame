@@ -6,7 +6,7 @@
 #define RENDERENGINE_H
 #include "RenderDispatcher.h"
 #include "../game/Scene.h"
-#include "Renderers/EntityRenderer.h"
+#include "renderers/EntityRenderer.h"
 #include "SFML/Graphics/RenderWindow.hpp"
 
 

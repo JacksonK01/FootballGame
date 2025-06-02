@@ -4,19 +4,22 @@
 
 #include "RenderEngine.h"
 
+//Pulls information from the Scene and properly distributes obj to be rendered
 RenderEngine::RenderEngine(Scene* scene, sf::RenderWindow* window) {
     this->currentScene = scene;
     this->window = window;
     this->renderDispatcher = RenderDispatcher();
 
-    // renderDispatcher.registerRenderer(typeid(Entity), []() -> Renderer* {
-    //     return new EntityRenderer();
-    // }
-    //     );
+    renderDispatcher.registerRenderer(typeid(Entity), []() -> Renderer* {
+        return new EntityRenderer();
+    });
+
 }
 
 void RenderEngine::draw() {
     window->clear();
+
+
 
     window->display();
 }

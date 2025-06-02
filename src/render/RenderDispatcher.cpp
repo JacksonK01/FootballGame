@@ -7,11 +7,11 @@
 RenderDispatcher::RenderDispatcher()
     :rendererRegistry() {};
 
-void RenderDispatcher::registerRenderer(std::type_index type, std::function<Renderer*()>& constructor) {
+void RenderDispatcher::registerRenderer(std::type_index type, std::function<Renderer*()> constructor) {
     rendererRegistry[type] = constructor;
 }
 
 Renderer *RenderDispatcher::getRenderer(Entity *entity) {
-    return rendererRegistry[typeid(entity)]();
+    return rendererRegistry[typeid(*entity)]();
 }
 

@@ -9,13 +9,13 @@
 #include <typeindex>
 #include <unordered_map>
 
-#include "Renderers/Renderer.h"
+#include "renderers/Renderer.h"
 
 
 class RenderDispatcher {
 public:
     RenderDispatcher();
-    void registerRenderer(std::type_index type, std::function<Renderer*()>& constructor);
+    void registerRenderer(std::type_index type, std::function<Renderer*()> constructor);
     Renderer* getRenderer(Entity* entity);
 private:
     std::unordered_map<std::type_index, std::function<Renderer*()>> rendererRegistry;
