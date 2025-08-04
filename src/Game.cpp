@@ -8,8 +8,8 @@
 
 Game::Game()
     :
-    gameEngine(),
-    renderEngine(gameEngine.getCurrentScene(), &window) {
+    gameEngine(window),
+    renderEngine(gameEngine.getCurrentScene(), window) {
 
 }
 

@@ -4,14 +4,22 @@
 
 #include "RenderDispatcher.h"
 
+#include <utility>
+
+#include "../utils/Logger.h"
+#include "layer/IRenderLayer.h"
+
+//Distributes the proper renderer as an instance (Possible change this to be on the fly)
 RenderDispatcher::RenderDispatcher()
-    :rendererRegistry() {};
+    :rendererRegistry() {
+    Logger::initialize("(RenderDispatcher) Initialized");
+};
 
-void RenderDispatcher::registerRenderer(std::type_index type, std::function<Renderer*()> constructor) {
-    rendererRegistry[type] = constructor;
+void RenderDispatcher::registerRenderer(const std::type_index& type, IRenderer* renderer) {
+    rendererRegistry[type] = std::move(renderer);
 }
 
-Renderer *RenderDispatcher::getRenderer(Entity *entity) {
-    return rendererRegistry[typeid(*entity)]();
-}
+IRenderer* RenderDispatcher::getRenderer(const std::type_info &type) {
+    return rendererRegistry[type];
+};
 

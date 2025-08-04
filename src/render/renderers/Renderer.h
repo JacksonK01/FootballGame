@@ -4,15 +4,22 @@
 
 #ifndef RENDERER_H
 #define RENDERER_H
+#include <iostream>
+
 #include "../../entity/Entity.h"
 #include <SFML/Graphics.hpp>
 
+#include "IRenderer.h"
 
-class Renderer {
+template<typename T>
+class Renderer : public IRenderer {
 public:
-    virtual ~Renderer() = default;
+    void renderGeneric(const void* toRender, sf::RenderWindow& window) override {
+        const T* toRenderTyped = static_cast<const T*>(toRender);
 
-    virtual void render(Entity* entity, sf::RenderWindow* window) = 0;
+        this->render(toRenderTyped, window);
+    }
+    virtual void render(const T* toRender, sf::RenderWindow& window) = 0;
 };
 
 

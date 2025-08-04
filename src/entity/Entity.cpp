@@ -3,18 +3,17 @@
 //
 
 #include "Entity.h"
+#include <sstream>
 
 #include <utility>
 
+#include "../utils/Logger.h"
+
 Entity::Entity() {
-    this->type = "Entity";
     this->x = 0;
     this->y = 0;
     this->speed = 5;
-}
-
-std::string Entity::getType() const {
-    return this->type;
+    this->lookVec = Vector2D();
 }
 
 int Entity::getX() const {
@@ -36,4 +35,22 @@ void Entity::setY(const int y) {
 int Entity::getSpeed() const {
     return this->speed;
 }
+
+void Entity::directionInput(const Vector2D direction) {
+    lookVec = direction;
+    this->x += direction.getX() * this->getSpeed();
+    this->y += direction.getY() * this->getSpeed();
+}
+
+void Entity::mouseInput(const Vector2D pos) {
+    lookVec = pos.normalize();
+}
+
+void Entity::tick(const int dt) {
+    std::stringstream ss;
+    ss << "LookVec = x:" << lookVec.getX() << " y:" << lookVec.getY();
+    Logger::warn(ss.str());
+}
+
+
 

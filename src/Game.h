@@ -13,7 +13,7 @@ public:
     void run();
 
 private:
-    sf::RenderWindow window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "Flag Football");
+    sf::RenderWindow window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "Game");
     GameEngine gameEngine;
     RenderEngine renderEngine;
 };

@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "Game.h"
+#include "utils/Logger.h"
 
 
 int main()
@@ -8,5 +9,5 @@ int main()
     Game game = Game();
     game.run();
 
-    std::cout << "Type: " << typeid(Game).name();
+    Logger::warn("Game Ended");
 }

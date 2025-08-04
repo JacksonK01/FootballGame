@@ -4,17 +4,16 @@
 
 #ifndef ENTITYRENDERER_H
 #define ENTITYRENDERER_H
-#include "../../entity/Entity.h"
 #include <SFML/Graphics.hpp>
 
-#include "Renderer.h"
+#include "../Renderer.h"
 
 
-class EntityRenderer : public Renderer {
+class EntityRenderer final : public Renderer<Entity> {
 public:
     EntityRenderer();
 
-    void render(Entity* entity, sf::RenderWindow* window) override;
+    void render(const Entity* entity, sf::RenderWindow& window) override;
 };
 
 

@@ -4,20 +4,25 @@
 
 #ifndef GAMEENGINE_H
 #define GAMEENGINE_H
-#include "../game/Scene.h"
+#include "../scenes/Scene.h"
 #include "../input/InputManager.h"
 #include "../entity/Entity.h"
+#include "../entity/Player.h"
+#include "SFML/Graphics/RenderWindow.hpp"
 
 class GameEngine {
 public:
-    GameEngine();
+    GameEngine(sf::RenderWindow& window);
 
     void tick();
     [[nodiscard]] Scene* getCurrentScene();
 private:
     Scene* currentScene;
     InputManager inputManager;
-    Entity player;
+    Player player1;
+
+    //Here for mouse click event
+    sf::RenderWindow& window;
 };
 
 

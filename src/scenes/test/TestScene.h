@@ -6,13 +6,14 @@
 #define TESTSCENE_H
 #include "../Scene.h"
 #include "../../entity/Entity.h"
+#include "../../entity/Player.h"
 
 
 class TestScene : public Scene {
 public:
-    explicit TestScene(Entity* player);
+    explicit TestScene(Player& player);
 private:
-    Entity* player;
+    Player& player;
 };
 
 

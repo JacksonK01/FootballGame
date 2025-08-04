@@ -12,6 +12,7 @@ class InputManager {
 public:
     InputManager();
     void createKeyPressedEvent(sf::Keyboard::Key key, const std::function<void()>& action);
+    void createMouseButtonEvent(sf::Mouse::Button button, const std::function<void()>& action);
     void tick();
 private:
     std::vector<std::function<void()>> keyPressedEvents;

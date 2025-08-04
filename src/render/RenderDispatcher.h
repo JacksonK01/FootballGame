@@ -15,10 +15,11 @@
 class RenderDispatcher {
 public:
     RenderDispatcher();
-    void registerRenderer(std::type_index type, std::function<Renderer*()> constructor);
-    Renderer* getRenderer(Entity* entity);
+    void registerRenderer(const std::type_index& type, IRenderer* constructor);
+    IRenderer* getRenderer(const std::type_info& type);
 private:
-    std::unordered_map<std::type_index, std::function<Renderer*()>> rendererRegistry;
+    std::unordered_map<std::type_index, IRenderer*> rendererRegistry;
+
 };
 
 

@@ -5,19 +5,23 @@
 #ifndef RENDERENGINE_H
 #define RENDERENGINE_H
 #include "RenderDispatcher.h"
-#include "../game/Scene.h"
-#include "renderers/EntityRenderer.h"
+#include "../scenes/Scene.h"
 #include "SFML/Graphics/RenderWindow.hpp"
 
 
 class RenderEngine {
 public:
-    explicit RenderEngine(Scene* scene, sf::RenderWindow* window);
+    explicit RenderEngine(Scene* scene, sf::RenderWindow& window);
     void draw();
 private:
     Scene* currentScene;
-    sf::RenderWindow* window;
+    //lastScene used to check if a scene changed.
+    Scene* lastScene;
+    sf::RenderWindow& window;
     RenderDispatcher renderDispatcher;
+
+    bool hasSceneChanged();
+    void setUpRenderLayers();
 };
 
 

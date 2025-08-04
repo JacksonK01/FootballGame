@@ -7,11 +7,10 @@
 #include "../RenderLayer.h"
 #include "../../../entity/Entity.h"
 
-
 class EntityRenderLayer : public RenderLayer<Entity> {
 public:
     EntityRenderLayer();
-    void addEntityToRender(Entity entity);
+    void addEntityToRender(const Entity* entity);
 };
 
 

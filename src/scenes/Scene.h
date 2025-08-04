@@ -7,14 +7,16 @@
 #include <vector>
 
 #include "../entity/Entity.h"
-
+#include "../render/layer/RenderLayer.h"
 
 class Scene {
 public:
     virtual ~Scene() = default;
-    std::vector<Entity*>& getAllEntities();
+    //Should return a SORTED version
+    std::vector<IRenderLayer*>& getRenderLayers();
+
 protected:
-    std::vector<Entity*> allEntity;
+    std::vector<IRenderLayer*> renderLayers;
 };
 
 
