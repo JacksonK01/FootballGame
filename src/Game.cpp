@@ -16,7 +16,11 @@ Game::Game()
 void Game::run() {
     window.setFramerateLimit(60);
 
+    sf::Clock clock;
+
     while (window.isOpen()) {
+        float deltaTime = clock.restart().asSeconds();
+
         while (const std::optional event = window.pollEvent())
         {
             if (event->is<sf::Event::Closed>())
@@ -27,7 +31,7 @@ void Game::run() {
             }
         }
 
-        gameEngine.tick();
-        renderEngine.draw();
+        gameEngine.tick(deltaTime);
+        renderEngine.draw(deltaTime);
     }
 }

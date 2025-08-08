@@ -14,7 +14,7 @@ class GameEngine {
 public:
     GameEngine(sf::RenderWindow& window);
 
-    void tick();
+    void tick(float dt);
     [[nodiscard]] Scene* getCurrentScene();
 private:
     Scene* currentScene;

@@ -3,15 +3,15 @@
 //
 
 #include "Entity.h"
+
+#include <iostream>
 #include <sstream>
 
 #include <utility>
 
 #include "../utils/Logger.h"
 
-Entity::Entity() {
-    this->x = 0;
-    this->y = 0;
+Entity::Entity(): x(0), y(0), boundingBox(this->x, this->y, 100, 100) {
     this->speed = 5;
     this->lookVec = Vector2D();
 }
@@ -44,12 +44,17 @@ void Entity::directionInput(const Vector2D direction) {
 
 void Entity::mouseInput(const Vector2D pos) {
     lookVec = pos.normalize();
+    std::cout << "I'm looking at " << lookVec << "\n";
 }
 
+void Entity::onClicked(const Vector2D pos) {
+    std::cout << "I've been clicked on at " << pos << "\n";
+}
+
+
 void Entity::tick(const int dt) {
-    std::stringstream ss;
-    ss << "LookVec = x:" << lookVec.getX() << " y:" << lookVec.getY();
-    Logger::warn(ss.str());
+    boundingBox.setX(this->x);
+    boundingBox.setY(this->y);
 }
 
 

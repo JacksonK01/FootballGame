@@ -12,7 +12,7 @@
 class RenderEngine {
 public:
     explicit RenderEngine(Scene* scene, sf::RenderWindow& window);
-    void draw();
+    void draw(float dt);
 private:
     Scene* currentScene;
     //lastScene used to check if a scene changed.

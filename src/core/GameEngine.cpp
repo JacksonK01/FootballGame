@@ -43,9 +43,9 @@ Scene* GameEngine::getCurrentScene() {
     return this->currentScene;
 }
 
-void GameEngine::tick() {
+void GameEngine::tick(float dt) {
     inputManager.tick();
-    player1.tick(1);
+    player1.tick(dt);
 }
 
 

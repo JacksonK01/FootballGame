@@ -8,7 +8,9 @@
 
 
 class QB : public Entity {
+public:
     QB();
+
 };
 
 

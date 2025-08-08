@@ -14,6 +14,10 @@ public:
     int getY() const;
     int getWidth() const;
     int getHeight() const;
+
+    void setX(const int x) { this->x = x; };
+    void setY(const int y) { this->y = y; };
+
     bool intersects(const Rectangle& other) const;
 private:
     int x, y;

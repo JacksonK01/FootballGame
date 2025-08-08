@@ -58,7 +58,9 @@ add_executable(main src/main.cpp
         src/scenes/football/positions/QB.h
         src/utils/math/Vector2D.cpp
         src/utils/math/Vector2D.h
-        src/utils/Directions.cpp)
+        src/utils/Directions.cpp
+        src/scenes/football/objects/Football.cpp
+        src/scenes/football/objects/Football.h)
 
 target_compile_features(main PRIVATE cxx_std_17)
 target_link_libraries(main PRIVATE SFML::Graphics)

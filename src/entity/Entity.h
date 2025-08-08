@@ -6,6 +6,7 @@
 #define ENTITY_H
 #include <string>
 
+#include "../utils/Rectangle.h"
 #include "../utils/math/Vector2D.h"
 
 
@@ -21,12 +22,15 @@ public:
     void setY(int y);
 
     [[nodiscard]] int getSpeed() const;
+    [[nodiscard]] Rectangle getBoundingBox() const { return boundingBox; }
 
     virtual ~Entity() = default;
 
     //Given from player.
     void directionInput(const Vector2D direction);
     void mouseInput(const Vector2D pos);
+    //When the entity is clicked on
+    void onClicked(const Vector2D pos);
     void tick(const int dt);
 
 private:
@@ -34,6 +38,7 @@ private:
     int x;
     int y;
     int speed;
+    Rectangle boundingBox;
 };
 
 

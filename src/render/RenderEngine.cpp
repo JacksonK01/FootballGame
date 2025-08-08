@@ -19,7 +19,7 @@ RenderEngine::RenderEngine(Scene* scene, sf::RenderWindow& window)
 }
 
 //TODO build better system for inner for loop, make map to hold the renderers
-void RenderEngine::draw() {
+void RenderEngine::draw(float dt) {
     window.clear();
 
     std::vector<IRenderLayer*>& layers = currentScene->getRenderLayers();

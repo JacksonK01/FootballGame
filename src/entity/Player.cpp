@@ -22,13 +22,19 @@ void Player::directionInput(const Vector2D direction) const {
 
 void Player::mousePressed(const Vector2D pos) const {
     if (linkedEntity) {
-        this->linkedEntity->mouseInput(pos);
+        Rectangle dummyRect = Rectangle((int) pos.getX(),(int) pos.getY(), 1, 1);
+
+        if (linkedEntity->getBoundingBox().intersects(dummyRect)) {
+            linkedEntity->onClicked(pos);
+        } else {
+            linkedEntity->mouseInput(pos);
+        }
     } else {
         Logger::warn("Player is not linked to an Entity.");
     }
 };
 
-void Player::tick(const int dt) {
+void Player::tick(const float dt) {
     if (linkedEntity) {
         this->linkedEntity->tick(dt);
     } else {

@@ -23,7 +23,7 @@ public:
     void setEntity(Entity* linkedEntity);
     void directionInput(const Vector2D direction) const;
     void mousePressed(const Vector2D pos) const;
-    void tick(const int dt);
+    void tick(const float dt);
 
 private:
     //Has to be direct pointer, references need to be init-ed
